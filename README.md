@@ -63,7 +63,7 @@ External API 1: Description of how this API is used in your code.
 External API 2: Description of how this API is used in your code.
 
 Deployment
-The application is deployed on Heroku for easy accessibility. It can be accessed at https://doctor-appointment-manager.herokuapp.com/.
+The application is deployed on Heroku for easy accessibility. It can be accessed at [https://doctor-appointment-manager.herokuapp.com/.](https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/)
 
 Backend and Frontend Separation
 The application follows a clear separation of backend and frontend code. The backend is built with Node.js and Express, while the frontend is built with React.
