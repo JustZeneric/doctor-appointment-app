@@ -13,8 +13,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB
-mongoose.connect('mongodb+srv://admin:1234@tasknest.orfrlpg.mongodb.net/MangApp', {
+// Connect to MongoDB using environment variables
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -23,7 +23,6 @@ mongoose.connection.on('connected', () => {
   console.log('Connected to MongoDB');
 });
 
-
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/appointments', require('./routes/appointmentRoutes'));
@@ -31,9 +30,11 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/auth', adminAuthRoutes);
 app.use('/availableSlots', availableSlotsRoutes);
 app.use('/api/doctors', require('./routes/doctorRoutes'));
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+
+// Serve static files from the client's build folder
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 });
 
 // Start server
