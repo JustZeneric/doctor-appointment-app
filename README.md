@@ -21,28 +21,29 @@ This web application allows users to schedule and manage doctor appointments eas
 
    ```bash
    git clone https://github.com/yourusername/doctor-appointment-manager.git
+
+
 Install dependencies:
 
 Navigate to the server and client folders and run:
-bash
-Copy code
+
 cd doctor-appointment-manager
 cd server && npm install
 cd ../client && npm install
+
 Set up environment variables:
 
 Ensure all necessary environment variables (database URLs, API keys, etc.) are set in the respective .env files for both the server and client.
+
 Usage
 Start the server:
 
-bash
-Copy code
 cd server && node server.js
+
 Start the client:
 
-bash
-Copy code
 cd client && npm start
+
 Visit http://localhost:3000 in your web browser to access the application.
 
 Security Measures
