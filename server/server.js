@@ -32,12 +32,12 @@ app.use('/api/auth', adminAuthRoutes);
 app.use('/availableSlots', availableSlotsRoutes);
 app.use('/api/doctors', require('./routes/doctorRoutes'));
 
-// Serve static files from the 'build' directory
-app.use(express.static(path.join(__dirname, 'client/build')));
+// Serve static files from the 'client/build' directory
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Handle React routing, return all requests to React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
 
