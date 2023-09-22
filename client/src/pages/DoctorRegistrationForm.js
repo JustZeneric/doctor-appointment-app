@@ -20,7 +20,7 @@ const DoctorRegistrationForm = ({ onClose }) => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/admin/create-doctor',
+        'https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/admin/create-doctor',
         formData,
         {
           headers: {

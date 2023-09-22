@@ -15,7 +15,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/adminLogin', formData);
+      const response = await axios.post('https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/auth/adminLogin', formData);
       localStorage.setItem('adminToken', response.data.token);
       // Redirect to admin dashboard
       window.location = '/admin/dashboard';

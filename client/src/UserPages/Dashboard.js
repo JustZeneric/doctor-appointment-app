@@ -109,7 +109,7 @@ const Dashboard = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `http://localhost:5000/api/appointments/update/${currentlyEditedAppointment._id}`,
+        `https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/appointments/update/${currentlyEditedAppointment._id}`,
         { description: editedData.description }, // Only send the updated description
         {
           headers: {
@@ -137,7 +137,7 @@ const Dashboard = () => {
   const handleConfirmCancelAppointment = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/appointments/delete/${cancelAppointmentId}`, {
+      await axios.delete(`https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/appointments/delete/${cancelAppointmentId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -153,7 +153,7 @@ const Dashboard = () => {
   const fetchAvailableDoctors = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/doctors', {
+      const response = await axios.get('https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/doctors', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -172,7 +172,7 @@ const Dashboard = () => {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.get(
-          'http://localhost:5000/api/appointments/get',
+          'https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/appointments/get',
           {
             headers: {
               Authorization: `Bearer ${token}`,
