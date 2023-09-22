@@ -30,7 +30,9 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/auth', adminAuthRoutes);
 app.use('/availableSlots', availableSlotsRoutes);
 app.use('/api/doctors', require('./routes/doctorRoutes'));
-
+app.get('/', (req, res) => {
+  res.send('Welcome to the Doctor Appointment Manager!');
+});
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
