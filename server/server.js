@@ -9,7 +9,7 @@ const { generateTimeSlots } = require('./utils/timeSlots'); // Import the genera
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+// Middleware code
 app.use(cors());
 app.use(express.json());
 
