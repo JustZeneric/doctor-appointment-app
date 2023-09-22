@@ -4,7 +4,7 @@ const cors = require('cors');
 const adminRoutes = require('./routes/adminRoutes');
 const adminAuthRoutes = require('./routes/adminAuthRoutes');
 const availableSlotsRoutes = require('./routes/availableSlots');
-const { generateTimeSlots } = require('./utils/timeSlots'); // Import the generateTimeSlots function
+const { generateTimeSlots } = require('./Utils/timeSlots'); // Import the generateTimeSlots function
 
 const app = express();
 const PORT = process.env.PORT || 5000;
