@@ -1,16 +1,16 @@
 {
   "name": "mern-task-manager-backend",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [
     "Task manager",
     "Tasks"
   ],
-  "author": "Aayush",
+  "author": "Luke",
   "license": "ISC",
   "description": "The backend part of simple task manager with user authentication",
   "dependencies": {
