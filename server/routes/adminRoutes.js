@@ -4,7 +4,7 @@ const User = require('../models/User');
 const Appointment = require('../models/Appointment');
 const Doctor = require('../models/Doctors');
 const AvailableSlot = require('../models/AvailableSlot');
-const { generateTimeSlots } = require('../Utils/timeSlots');
+const { generateTimeSlots } = require('../utils/timeSlots');
 
 // Get all users
 router.get('/users', async (req, res) => {
