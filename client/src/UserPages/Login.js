@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/auth/login', formData);
+      const response = await axios.post('https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/auth/login', formData);
       console.log(response.data);
   
       // Save token and user name to local storage
