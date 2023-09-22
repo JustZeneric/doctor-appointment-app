@@ -4,7 +4,6 @@ const cors = require('cors');
 const adminRoutes = require('./routes/adminRoutes');
 const adminAuthRoutes = require('./routes/adminAuthRoutes');
 const availableSlotsRoutes = require('./routes/availableSlots');
-const { generateTimeSlots } = require('./Utils/timeSlots'); // Import the generateTimeSlots function
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -23,9 +22,6 @@ mongoose.connection.on('connected', () => {
   console.log('Connected to MongoDB');
 });
 
-// Generate time slots and log them to the console
-const timeSlots = generateTimeSlots();
-console.log('Generated Time Slots:', timeSlots);
 
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
