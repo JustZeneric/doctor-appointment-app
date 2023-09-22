@@ -13,6 +13,9 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <div className="App">
+        <LandingPage />
+      </div>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/register" element={<Register />} />
