@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  flex-direction: column;
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 1.5rem;
+
+    color: #333;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  
+  .logout-button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .logout-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .label {
+    text-align: center;
+    display: block;
+    margin: 0;
+  }
+  .doctorbtns {
+    text-align: right;
+  }
+  .listname {
+    display: flex;
+    gap: 20px;
+    width: 20%;
+  }
+  .description {
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 165px; /* Adjust this value as needed */
+    width: 100%;
+  }
+  .description-container {
+    width: 20%;
+  }
+  .patient-name {
+    display: flex;
+    gap: 10px;
+    width: 30%;
+  }
+  .date-lab {
+    display: flex;
+    gap: 10px;
+    width: auto;
+  }
+  .time-lab {
+    display: flex;
+    gap: 10px;
+    width: 20%;
+  }
+  .action-btns {
+    display: flex;
+    gap: 20px;
+    width: auto;
+  }
