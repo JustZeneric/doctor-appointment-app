@@ -79,7 +79,7 @@ const Dashboard = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:5000/api/appointments/create',
+        'https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/appointments/create',
         formData,
         {
           headers: {

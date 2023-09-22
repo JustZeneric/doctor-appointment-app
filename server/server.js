@@ -30,6 +30,9 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/auth', adminAuthRoutes);
 app.use('/availableSlots', availableSlotsRoutes);
 app.use('/api/doctors', require('./routes/doctorRoutes'));
+app.use(cors({
+  origin: '*',
+}));
 
 // Serve static files from the 'client/build' directory
 app.use(express.static(path.join(__dirname, '../client/build')));
