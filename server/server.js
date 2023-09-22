@@ -4,6 +4,7 @@ const cors = require('cors');
 const adminRoutes = require('./routes/adminRoutes');
 const adminAuthRoutes = require('./routes/adminAuthRoutes');
 const availableSlotsRoutes = require('./routes/availableSlots');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -24,14 +25,15 @@ mongoose.connection.on('connected', () => {
 
 
 // Routes
+app.use(express.static(path.join(__dirname, 'Client/build')));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/appointments', require('./routes/appointmentRoutes'));
 app.use('/api/admin', adminRoutes);
 app.use('/api/auth', adminAuthRoutes);
 app.use('/availableSlots', availableSlotsRoutes);
 app.use('/api/doctors', require('./routes/doctorRoutes'));
-app.get('/', (req, res) => {
-  res.send('Welcome to the Doctor Appointment Manager!');
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'Client/build', 'index.html'));
 });
 // Start server
 app.listen(PORT, () => {

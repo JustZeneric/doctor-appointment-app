@@ -7,7 +7,6 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import LandingPage from './UserPages/LandingPage';
 
-
 function App() {
   const isAdmin = true; // Set this based on your authentication logic
 
@@ -17,6 +16,7 @@ function App() {
         <div className="App">
           <Routes>
           <Route path="/" element={<LandingPage />} />
+          
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />

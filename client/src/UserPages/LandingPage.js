@@ -8,6 +8,7 @@ const LandingPage = () => {
   <h2 className="landing-title">Welcome to the Appointment App</h2>
   <p className="landing-description">Manage your appointments easily!</p>
   <div className="landing-links">
+    
     <Link to="/register" className="landing-link">
       Register
     </Link>
