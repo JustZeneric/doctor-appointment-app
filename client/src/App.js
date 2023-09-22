@@ -13,11 +13,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <div className="App">
-        <LandingPage />
-      </div>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} /> {/* Use LandingPage as the initial route */}
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
