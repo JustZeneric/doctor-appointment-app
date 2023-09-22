@@ -8,7 +8,7 @@ const availableSlotsRoutes = require('./routes/availableSlots');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const port = number(process.env["port"]) || 5000
 
 // Middleware code
 app.use(cors());
