@@ -14,9 +14,9 @@ const DoctorRegistrationForm = ({ onClose }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
@@ -28,8 +28,11 @@ const DoctorRegistrationForm = ({ onClose }) => {
           },
         }
       );
-
-      console.log(response.data);
+  
+      console.log(response.data); // Log the response data (optional)
+  
+      // Close the form after successful registration
+      onClose();
     } catch (error) {
       console.error(error.response.data.error);
     }
