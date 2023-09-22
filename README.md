@@ -14,7 +14,7 @@ Installation
 Clone the repository to your local machine using the following command:
 bash
 Copy code
-git clone https://github.com/yourusername/doctor-appointment-manager.git
+git clone [https://github.com/yourusername/doctor-appointment-manager.git](https://github.com/JustZeneric/doctor-appointment-app.git)
 Install the necessary dependencies for the server and client:
 bash
 Copy code
