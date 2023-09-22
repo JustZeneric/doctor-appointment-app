@@ -12,7 +12,7 @@ const AdminDashboard = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/admin/users', {
+        const response = await axios.get('https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/admin/users', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5000/api/admin/appointments/${userId}`, {
+      const response = await axios.get(`https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/admin/appointments/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
   const handleDeleteAppointment = async (appointmentId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.delete(`http://localhost:5000/api/admin/appointments/${appointmentId}`, {
+      const response = await axios.delete(`https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/admin/appointments/${appointmentId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

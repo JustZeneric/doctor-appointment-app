@@ -19,7 +19,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post('https://doctor-appointment-manager-e8b27b2bd3ef.herokuapp.com/api/auth/register', formData);
       console.log(response.data);
       navigate('/login'); // Redirect to login page after successful registration
     } catch (error) {

@@ -1,4 +1,4 @@
-const Doctor = require('../models/Doctor');
+const Doctor = require('../models/Doctors');
 const AvailableSlot = require('../models/AvailableSlot');
 
 const generateAvailableSlots = async () => {
