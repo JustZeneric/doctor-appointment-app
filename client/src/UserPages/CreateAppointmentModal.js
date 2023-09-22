@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import '../css/Dashboard.css'; 
 
 
 const CreateAppointmentModal = ({
   onClose,
   onSave,
-  appointmentTimes,
   availableSlots,
   selectedDoctor,
 }) => {
